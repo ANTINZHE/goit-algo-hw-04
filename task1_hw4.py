@@ -20,7 +20,7 @@ def total_salary(path: Path) -> tuple[int, int]:
         print("File not found.")
 
 # Створення файлу з оплатами
-list_of_payments = """Alex Korp,6000\nNikita Borisenko,2000\nSitarama Raju,1000"""
+list_of_payments = "Alex Korp,6000\nNikita Borisenko,2000\nSitarama Raju,1000"
 with open('list_of payments.txt', "w") as file:
     file.write(list_of_payments)
 
