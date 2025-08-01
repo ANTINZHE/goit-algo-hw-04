@@ -3,7 +3,7 @@ def total_salary(path: str) -> tuple[int, int]:
     number_of_workers = 0
 
     try:
-        with open(path, "r") as file:
+        with open(path, "r", encoding="UTF-8") as file:
             for line in file:
                 name, payment_str = line.strip().split(",")
                 payment = int(payment_str)
