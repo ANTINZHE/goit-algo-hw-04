@@ -10,8 +10,8 @@ def total_salary(path: str) -> tuple[int, int]:
                 total_sum += payment
                 number_of_workers += 1
 
-        middle_payment = total_sum / number_of_workers
-        return total_sum, int(middle_payment)
+        average = total_sum / number_of_workers
+        return total_sum, int(average)
 
     except FileNotFoundError:
         return "Файл не знайдено"
