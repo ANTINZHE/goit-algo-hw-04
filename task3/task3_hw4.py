@@ -21,17 +21,17 @@ def print_directory_tree(path: Path, prefix: str = ""):
 def main():
     if len(sys.argv) != 2:
         print(f"{Fore.RED} Помилка, вкажіть вірний шлях до директорії")
-        sys.exit(1)
+        return
 
     path_str = sys.argv[1]
     path = Path(path_str)
 
     if not path.exists():
         print(f"{Fore.RED} Помилка, вказаний шлях не існує")
-        sys.exit(1)
+        return
     if not path.is_dir():
         print(f"{Fore.RED} Помилка, вказаний шлях не директорія")
-        sys.exit(1)
+        return
 
     print(f"{Fore.CYAN}Стурктура директорії: {path.resolve()}")
     print_directory_tree(path)
